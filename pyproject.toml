@@ -1,0 +1,19 @@
+# FILEPATH: /home/shannon/local/Source/Python/bm_study/pyproject.toml
+
+[tool.black]
+line-length = 130
+target-version = ["py38", "py39"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
