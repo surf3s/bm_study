@@ -9,6 +9,8 @@ venv/
 env/
 *.env
 .venv/
+unet/venv/
+yolo/venv/
 
 # IDE
 .idea/
@@ -28,15 +30,20 @@ env/
 Thumbs.db
 
 images/
-review/
-run_01/
-run_02/
-run_03/
-unet/
-*.png
-unet/
 *.keras
 *.hdf5
-results/*.keras
-results/*.h5
+*.pt
+*.pkl
+*.html
+unet/run_unet_images_*/
+unet/run_unet_texture_*/
+yolo/run_yolo_01/
+runs/
 
+unused_code/
+unet/unused_code/
+unet/data/glcm
+unet/images_unet
+results/
+images/
+use_in_next*.txt

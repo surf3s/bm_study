@@ -1,0 +1,53 @@
+---
+title: Sample Imbalance
+output:
+    quarto::html_document:
+        self_contained: false
+execute: 
+  echo: false
+
+# format:
+#   pdf:
+#     documentclass: scrartcl
+#     papersize: A4
+
+---
+
+# Images used to train the model and their masks
+
+
+```{r}
+
+white_pixels <- readLines("white_pixels.txt")
+
+```
+
+```{r}
+
+library(ggplot2)
+
+# Convert white_pixels to numeric
+white_pixels <- as.numeric(white_pixels)
+
+# Create a data frame with a single column
+df <- data.frame(white_pixels)
+
+# Create the box and whisker plot
+p = ggplot(df, aes(x = "", y = white_pixels)) +
+    geom_violin(alpha = .5, fill = 'lightblue') +
+    geom_point(position = position_jitter(seed = 1, width = 0.2)) +
+    ylim(0, 1) +
+    theme_minimal() +
+    ylab('Proportion') + 
+    xlab('Bone absorption') +
+    theme(text = element_text(size = 20))
+p
+
+```
+
+```{r}
+
+# save the plot as 'imbalance.png'
+ggsave("imbalance.png", p)
+
+```
