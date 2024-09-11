@@ -2,6 +2,10 @@
 This code takes the already downsized and ready for analysis images
 and analyzes their texture using GLCM.  Five outputs are written.
 In the subsequent steps, three of these are fed into the model.
+
+Note that no steps have been taken to optimize this code, and 
+it can take many hours to run.  It would be good to convert it
+to parallel processing.
 """
 
 from skimage.io import imread

@@ -6,4 +6,6 @@ The unet and yolo folders are kept separate because they have different Python d
 
 The authors reserve the right to change this code after the meetings in order to improve it.  However, a branch will be made to preserve this version of the code.
 
+The files train_files.txt, val_files.txt, and test_files.txt were created once from the original image dataset used here.  The distribution was random and written to these files so that the same distribution could be used for all models compared here.
+
 Note that the original TIFF images are not included in this repository.  Downsampled versions of these images are included in yolo and unet.  After the meetings, this structure will be changed to have one copy of the images at YOLOv8 resolution which can be further downsampled for the unet models.
