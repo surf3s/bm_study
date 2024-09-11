@@ -29,7 +29,7 @@ yolo/venv/
 .DS_Store
 Thumbs.db
 
-images/
+# images/
 *.keras
 *.hdf5
 *.pt
@@ -45,5 +45,5 @@ unet/unused_code/
 unet/data/glcm
 unet/images_unet
 results/
-images/
+/images/
 use_in_next*.txt
